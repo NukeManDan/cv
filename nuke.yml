@@ -1,22 +1,17 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/jskherman/cv.typ/main/cv.typ.schema.json
-
 personal:
-  name: John Smith L. Doe
-  email: johndoe@example.com
-  phone: (+1) 987 6543 210
-  url: https://johndoe.com
+  name: Nuke (Dan Shields)
+  email: nukemandan@protonmail.com
   location:
-    city: New York
-    region: New York
-    postalCode: 1234
-    country: United States of America
+    country: USA
+    state: Colorado
+    city: Denver
   profiles:
     - network: LinkedIn
-      username: John Doe
-      url: https://linkedin.com/in/johndoe
+      username: Nuke
+      url: https://www.linkedin.com/in/nuke-web3/
     - network: GitHub
-      username: johndoe
-      url: https://github.com/johndoe
+      username: NukeManDan
+      url: https://github.com/nukemandan
 
 work:
   - organization: X Company
