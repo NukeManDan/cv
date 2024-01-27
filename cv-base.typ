@@ -17,6 +17,10 @@
         justify: true,
     )
 
+    set underline(
+        offset: 0.13em, 
+    )
+
     doc
 }
 
@@ -48,6 +52,14 @@
             upper(it.body)
         }
         #v(-0.75em) #line(length: 100%, stroke: 1pt + black) // draw a line
+    ]
+
+    show link: it => [
+        #set underline(
+            offset: 0.35em,
+            stroke: (paint: rgb("#675C73"), thickness: 0.13em, dash: "dash-dotted")
+        )
+        #underline(it)
     ]
 
     doc
@@ -109,7 +121,7 @@
                     #let start = utils.strpdate(p.startDate)
                     #let end = utils.strpdate(p.endDate)
                     // line 2: position and date range
-                    #underline(offset: 0.13em, text(style: "italic")[
+                    #underline(text(style: "italic")[
                         #p.position
                         #h(1fr)
                         #start #sym.dash.en #end
@@ -151,7 +163,7 @@
                     *#edu.institution* #h(1fr) *#edu.location* \
                 ]
                 // line 2: degree and date
-                #underline(offset: 0.13em, text(style: "italic")[
+                #underline(text(style: "italic")[
                     #edu.studyType in #edu.area
                     #h(1fr)
                     #start #sym.dash.en #end
@@ -179,7 +191,7 @@
                     *#org.organization* #h(1fr) *#org.location* \
                 ]
                 // line 2: position and date
-                #underline(offset: 0.13em, text(style: "italic")[
+                #underline(text(style: "italic")[
                     #org.position
                     #h(1fr)
                     #start #sym.dash.en #end
@@ -211,7 +223,7 @@
                     *#project.name* \
                 ]
                 // line 2: organization and date
-                #underline(offset: 0.13em, text(style: "italic")[
+                #underline(text(style: "italic")[
                     #project.affiliation
                     #h(1fr)
                     #start #sym.dash.en #end
@@ -240,7 +252,7 @@
                     *#award.title* #h(1fr) *#award.location* \
                 ]
                 // line 2: issuer and date
-                #underline(offset: 0.13em, [
+                #underline([
                     Issued by #text(style: "italic")[#award.issuer]
                     #h(1fr)
                     #date
@@ -272,7 +284,7 @@
                     *#cert.name* \
                 ]
                 // line 2: issuer and date
-                #underline(offset: 0.13em, [
+                #underline([
                     Issued by #text(style: "italic")[#cert.issuer]
                     #h(1fr)
                     #date
@@ -297,7 +309,7 @@
                     *#pub.name* \
                 ]
                 // line 2: publisher and date
-                #underline(offset: 0.13em, [
+                #underline([
                     Published on #text(style: "italic")[#pub.publisher]
                     #h(1fr)
                     #date
@@ -346,7 +358,7 @@
 #let endnote() = {
     place(
         right,
-        dy: -0.8em,
+        dy: -0.6em,
         block[
             #set text(size: 8pt, font: "Consolas")
             Updated on #datetime.today().display("[year]-[month]-[day]") with #strike[LaTeX] *#link("https://typst.app")[Typst]*
