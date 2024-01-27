@@ -3,12 +3,10 @@
 #let cvdata = yaml("nuke.yml")
 
 #let uservars = (
-    headingfont: "Linux Libertine",
-    bodyfont: "Linux Libertine",
-    fontsize: 10pt, // 10pt, 11pt, 12pt
+    headingfont: "Nimbus Roman",
+    bodyfont: "Fira Sans",
+    fontsize: 11pt, // 10pt, 11pt, 12pt
     linespacing: 6pt,
-    showAddress: true, // true/false show address in contact info
-    showNumber: true,  // true/false show phone number in contact info
     headingsmallcaps: false
 )
 
@@ -23,9 +21,16 @@
     // add custom document style rules here
     set page(
         paper: "us-letter", // a4, us-letter
-        numbering: "1 / 1",
-        number-align: center, // left, center, right
-        margin: 1.25cm, // 1.25cm, 1.87cm, 2.5cm
+        margin: 1cm,
+        footer: [
+            #set align(center)
+            #set text(0.8em)
+            #counter(page).display(
+                "1/1",
+                both: true,
+            )
+            #endnote()
+        ]
     )
 
     doc
@@ -53,7 +58,6 @@
 #cvprojects(cvdata)
 #cvawards(cvdata)
 #cvcertificates(cvdata)
-#cvpublications(cvdata)
+// #cvpublications(cvdata)
 #cvskills(cvdata)
 #cvreferences(cvdata)
-#endnote()

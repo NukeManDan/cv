@@ -22,20 +22,6 @@
 
 // show rules
 #let showrules(uservars, doc) = {
-    // uppercase section headings
-    show heading.where(
-        level: 2,
-    ): it => block(width: 100%)[
-        #set align(left)
-        #set text(font: uservars.headingfont, size: 1em, weight: "bold")
-        #if (uservars.at("headingsmallcaps", default:false)) {
-            smallcaps(it.body)
-        } else {
-            upper(it.body)
-        }
-        #v(-0.75em) #line(length: 100%, stroke: 1pt + black) // draw a line
-    ]
-
     // name title
     show heading.where(
         level: 1,
@@ -46,7 +32,22 @@
         } else {
             upper(it.body)
         }
-        #v(2pt)
+        #v(4pt)
+    ]
+
+    // uppercase section headings
+    show heading.where(
+        level: 2,
+    ): it => block(width: 100%)[
+        #v(4pt)
+        #set align(left)
+        #set text(font: uservars.headingfont, size: 1.1em, weight: "bold")
+        #if (uservars.at("headingsmallcaps", default:false)) {
+            smallcaps(it.body)
+        } else {
+            upper(it.body)
+        }
+        #v(-0.75em) #line(length: 100%, stroke: 1pt + black) // draw a line
     ]
 
     doc
@@ -58,16 +59,6 @@
     doc = showrules(doc)
 
     doc
-}
-
-// address
-#let addresstext(info, uservars) = {
-    if uservars.showAddress {
-        block(width: 100%)[
-            #info.personal.location.city, #info.personal.location.state (#info.personal.location.country)
-            #v(-4pt)
-        ]
-    } else {none}
 }
 
 #let contacttext(info, uservars) = block(width: 100%)[
@@ -83,16 +74,16 @@
         }
     }
 
-    #set text(font: uservars.bodyfont, weight: "medium", size: uservars.fontsize * 1)
+    #set text(font: uservars.bodyfont, size: uservars.fontsize * 1)
     #pad(x: 0em)[
         #profiles.join([#sym.space.en #sym.diamond.filled #sym.space.en])
     ]
+    #v(4pt)
 ]
 
 #let cvheading(info, uservars) = {
     align(center)[
         = #info.personal.name
-        #addresstext(info, uservars)
         #contacttext(info, uservars)
     ]
 }
@@ -112,14 +103,17 @@
             // create a block layout for each work entry
             let index = 0
             for p in w.positions {
-                if index != 0 {v(0.6em)}
-                block(width: 100%, breakable: isbreakable, above: 0.6em)[
+                v(0.2em)
+                block(width: 100%, breakable: isbreakable, above: 0.8em)[
                     // parse ISO date strings into datetime objects
                     #let start = utils.strpdate(p.startDate)
                     #let end = utils.strpdate(p.endDate)
                     // line 2: position and date range
-                    #text(style: "italic")[#p.position] #h(1fr)
-                    #start #sym.dash.en #end \
+                    #underline(offset: 0.13em, text(style: "italic")[
+                        #p.position
+                        #h(1fr)
+                        #start #sym.dash.en #end
+                    ])\
                     // highlights or description
                     #for hi in p.highlights [
                         - #eval(hi, mode: "markup")
@@ -157,8 +151,11 @@
                     *#edu.institution* #h(1fr) *#edu.location* \
                 ]
                 // line 2: degree and date
-                #text(style: "italic")[#edu.studyType in #edu.area] #h(1fr)
-                #start #sym.dash.en #end \
+                #underline(offset: 0.13em, text(style: "italic")[
+                    #edu.studyType in #edu.area
+                    #h(1fr)
+                    #start #sym.dash.en #end
+                ]) \
                 #eval(edu-items, mode: "markup")
             ]
         }
@@ -182,8 +179,11 @@
                     *#org.organization* #h(1fr) *#org.location* \
                 ]
                 // line 2: position and date
-                #text(style: "italic")[#org.position] #h(1fr)
-                #start #sym.dash.en #end \
+                #underline(offset: 0.13em, text(style: "italic")[
+                    #org.position
+                    #h(1fr)
+                    #start #sym.dash.en #end
+                ]) \
                 // highlights or description
                 #if org.highlights != none {
                     for hi in org.highlights [
@@ -211,7 +211,11 @@
                     *#project.name* \
                 ]
                 // line 2: organization and date
-                #text(style: "italic")[#project.affiliation]  #h(1fr) #start #sym.dash.en #end \
+                #underline(offset: 0.13em, text(style: "italic")[
+                    #project.affiliation
+                    #h(1fr)
+                    #start #sym.dash.en #end
+                ])\
                 // summary or description
                 #for hi in project.highlights [
                     - #eval(hi, mode: "markup")
@@ -236,7 +240,11 @@
                     *#award.title* #h(1fr) *#award.location* \
                 ]
                 // line 2: issuer and date
-                Issued by #text(style: "italic")[#award.issuer]  #h(1fr) #date \
+                #underline(offset: 0.13em, [
+                    Issued by #text(style: "italic")[#award.issuer]
+                    #h(1fr)
+                    #date
+                ]) \
                 // summary or description
                 #if award.highlights != none {
                     for hi in award.highlights [
@@ -264,7 +272,11 @@
                     *#cert.name* \
                 ]
                 // line 2: issuer and date
-                Issued by #text(style: "italic")[#cert.issuer]  #h(1fr) #date \
+                #underline(offset: 0.13em, [
+                    Issued by #text(style: "italic")[#cert.issuer]
+                    #h(1fr)
+                    #date
+                ]) \
             ]
         }
     ]}
@@ -285,7 +297,11 @@
                     *#pub.name* \
                 ]
                 // line 2: publisher and date
-                Published on #text(style: "italic")[#pub.publisher]  #h(1fr) #date \
+                #underline(offset: 0.13em, [
+                    Published on #text(style: "italic")[#pub.publisher]
+                    #h(1fr)
+                    #date
+                ]) \
             ]
         }
     ]}
@@ -329,10 +345,11 @@
 
 #let endnote() = {
     place(
-        bottom + right,
+        right,
+        dy: -0.8em,
         block[
-            #set text(size: 5pt, font: "Consolas", fill: silver)
-            \*This document was last updated on #datetime.today().display("[year]-[month]-[day]") using #strike[LaTeX] #link("https://typst.app")[Typst].
+            #set text(size: 8pt, font: "Consolas")
+            Updated on #datetime.today().display("[year]-[month]-[day]") with #strike[LaTeX] *#link("https://typst.app")[Typst]*
         ]
     )
 }
