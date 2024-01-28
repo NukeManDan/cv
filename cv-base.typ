@@ -2,6 +2,8 @@
 
 // set rules
 #let setrules(uservars, doc) = {
+    set heading(numbering: "1")
+
     set text(
         font: uservars.bodyfont,
         size: uservars.fontsize,
@@ -17,10 +19,6 @@
         justify: true,
     )
 
-    set underline(
-        offset: 0.13em, 
-    )
-
     doc
 }
 
@@ -30,7 +28,7 @@
     show heading.where(
         level: 1,
     ): it => block(width: 100%)[
-        #set text(font: uservars.headingfont, size: 1.5em, weight: "bold")
+        #set text(font: uservars.headingfont, size: 1.4em, weight: "bold")
         #if (uservars.at("headingsmallcaps", default:false)) {
             smallcaps(it.body)
         } else {
@@ -43,21 +41,27 @@
     show heading.where(
         level: 2,
     ): it => block(width: 100%)[
-        #v(4pt)
         #set align(left)
-        #set text(font: uservars.headingfont, size: 1.1em, weight: "bold")
+        #set text(font: uservars.headingfont, weight: "bold")
         #if (uservars.at("headingsmallcaps", default:false)) {
             smallcaps(it.body)
         } else {
             upper(it.body)
         }
-        #v(-0.75em) #line(length: 100%, stroke: 1pt + black) // draw a line
+        #v(-0.95em) #line(length: 100%, stroke: 0.5pt + black) // draw a line
+    ]
+
+    show heading.where(
+        level: 3,
+    ): it => block(width: 100%)[
+        #set text(font: uservars.headingfont, size: 1.16em, weight: "regular")
+        #it.body
     ]
 
     show link: it => [
         #set underline(
-            offset: 0.35em,
-            stroke: (paint: rgb("#675C73"), thickness: 0.13em, dash: "dash-dotted")
+            offset: 0.15em,
+            stroke: (paint: rgb("#475C73"), thickness: 0.1em, dash: "dotted")
         )
         #underline(it)
     ]
@@ -102,14 +106,14 @@
 
 #let cvwork(info, isbreakable: true) = {
     if info.work != none {block[
-        == Work Experience
+        == Work Experience <work>
         #for w in info.work {
             block(width: 100%, breakable: isbreakable)[
                 // line 1: company and location
                 #if w.url != none [
-                    *#link(w.url)[#w.organization]* #h(1fr) *#w.location* \
+                    === #link(w.url)[#w.organization] #utils.ref-label(w.organization,"") #h(1fr) #w.location \
                 ] else [
-                    *#w.organization* #h(1fr) *#w.location* \
+                    === #w.organization #utils.ref-label(w.organization, "") #h(1fr) #w.location \
                 ]
             ]
             // create a block layout for each work entry
@@ -121,11 +125,14 @@
                     #let start = utils.strpdate(p.startDate)
                     #let end = utils.strpdate(p.endDate)
                     // line 2: position and date range
-                    #underline(text(style: "italic")[
+                    #text(size: 1.07em, style: "italic")[
                         #p.position
                         #h(1fr)
                         #start #sym.dash.en #end
-                    ])\
+                    ]\
+
+                    #utils.ref-label(w.organization, p.position)
+
                     // highlights or description
                     #for hi in p.highlights [
                         - #eval(hi, mode: "markup")
@@ -139,7 +146,7 @@
 
 #let cveducation(info, isbreakable: true) = {
     if info.education != none {block[
-        == Education
+        == Education <edu>
         #for edu in info.education {
             let start = utils.strpdate(edu.startDate)
             let end = utils.strpdate(edu.endDate)
@@ -158,9 +165,9 @@
             block(width: 100%, breakable: isbreakable)[
                 // line 1: institution and location
                 #if edu.url != none [
-                    *#link(edu.url)[#edu.institution]* #h(1fr) *#edu.location* \
+                    === #link(edu.url)[#edu.institution] #h(1fr) #edu.location \
                 ] else [
-                    *#edu.institution* #h(1fr) *#edu.location* \
+                    === #edu.institution #h(1fr) #edu.location \
                 ]
                 // line 2: degree and date
                 #underline(text(style: "italic")[
@@ -176,7 +183,7 @@
 
 #let cvaffiliations(info, isbreakable: true) = {
     if info.affiliations != none {block[
-        == Leadership & Activities
+        == Leadership & Activities <lead>
         #for org in info.affiliations {
             // parse ISO date strings into datetime objects
             let start = utils.strpdate(org.startDate)
@@ -186,9 +193,9 @@
             block(width: 100%, breakable: isbreakable)[
                 // line 1: organization and location
                 #if org.url != none [
-                    *#link(org.url)[#org.organization]* #h(1fr) *#org.location* \
+                    === #link(org.url)[#org.organization] #h(1fr) #org.location \
                 ] else [
-                    *#org.organization* #h(1fr) *#org.location* \
+                    === #org.organization #h(1fr) #org.location \
                 ]
                 // line 2: position and date
                 #underline(text(style: "italic")[
@@ -209,7 +216,7 @@
 
 #let cvprojects(info, isbreakable: true) = {
     if info.projects != none {block[
-        == Projects
+        == Projects <proj>
         #for project in info.projects {
             // parse ISO date strings into datetime objects
             let start = utils.strpdate(project.startDate)
@@ -218,9 +225,9 @@
             block(width: 100%, breakable: isbreakable)[
                 // line 1: project name
                 #if project.url != none [
-                    *#link(project.url)[#project.name]* \
+                    === #link(project.url)[#project.name] \
                 ] else [
-                    *#project.name* \
+                    === #project.name \
                 ]
                 // line 2: organization and date
                 #underline(text(style: "italic")[
@@ -239,7 +246,7 @@
 
 #let cvawards(info, isbreakable: true) = {
     if info.awards != none {block[
-        == Honors & Awards
+        == Honors & Awards <awards>
         #for award in info.awards {
             // parse ISO date strings into datetime objects
             let date = utils.strpdate(award.date)
@@ -247,9 +254,9 @@
             block(width: 100%, breakable: isbreakable)[
                 // line 1: award title and location
                 #if award.url != none [
-                    *#link(award.url)[#award.title]* #h(1fr) *#award.location* \
+                    === #link(award.url)[#award.title] #h(1fr) #award.location \
                 ] else [
-                    *#award.title* #h(1fr) *#award.location* \
+                    === award.title #h(1fr) #award.location \
                 ]
                 // line 2: issuer and date
                 #underline([
@@ -270,7 +277,7 @@
 
 #let cvcertificates(info, isbreakable: true) = {
     if info.certificates != none {block[
-        == Licenses & Certifications
+        == Licenses & Certifications <certs>
 
         #for cert in info.certificates {
             // parse ISO date strings into datetime objects
@@ -279,9 +286,9 @@
             block(width: 100%, breakable: isbreakable)[
                 // line 1: certificate name
                 #if cert.url != none [
-                    *#link(cert.url)[#cert.name]* \
+                    === #link(cert.url)[#cert.name] \
                 ] else [
-                    *#cert.name* \
+                    === #cert.name \
                 ]
                 // line 2: issuer and date
                 #underline([
@@ -296,7 +303,7 @@
 
 #let cvpublications(info, isbreakable: true) = {
     if info.publications != none {block[
-        == Research & Publications
+        == Research & Publications <pubs>
         #for pub in info.publications {
             // parse ISO date strings into datetime objects
             let date = utils.strpdate(pub.releaseDate)
@@ -304,9 +311,9 @@
             block(width: 100%, breakable: isbreakable)[
                 // line 1: publication title
                 #if pub.url != none [
-                    *#link(pub.url)[#pub.name]* \
+                    === #link(pub.url)[#pub.name] \
                 ] else [
-                    *#pub.name* \
+                    === #pub.name \
                 ]
                 // line 2: publisher and date
                 #underline([
@@ -321,7 +328,7 @@
 
 #let cvskills(info, isbreakable: true) = {
     if (info.languages != none) or (info.skills != none) or (info.interests != none) {block(breakable: isbreakable)[
-        == Skills, Languages, Interests
+        == Skills, Languages, Interests <skills>
         #if (info.languages != none) [
             #let langs = ()
             #for lang in info.languages {
@@ -342,7 +349,7 @@
 
 #let cvreferences(info, isbreakable: true) = {
     if info.references != none {block[
-        == References
+        == References <refs>
         #for ref in info.references {
             block(width: 100%, breakable: isbreakable)[
                 #if ref.url != none [

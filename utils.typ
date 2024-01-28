@@ -40,3 +40,12 @@
     }
     return date
 }
+
+// Get in inner reference label for two varialbles mapped to "prefix-postfix" using the first word in the strings provided.
+#let ref-label(pre, post) = {
+    let l = lower(pre.split(" ").at(0)) 
+    if post == "" {
+        return label(l)
+    }
+    label(l + "-" + lower(post.split(" ").at(0)))
+}

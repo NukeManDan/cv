@@ -3,8 +3,8 @@
 #let cvdata = yaml("nuke.yml")
 
 #let uservars = (
-    headingfont: "Nimbus Roman",
-    bodyfont: "Fira Sans",
+    headingfont: "Fira Sans",
+    bodyfont: "Sans",
     fontsize: 11pt, // 10pt, 11pt, 12pt
     linespacing: 6pt,
     headingsmallcaps: false
