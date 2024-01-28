@@ -8,44 +8,88 @@ personal:
   profiles:
     - network: LinkedIn
       username: Nuke
-      url: https://www.linkedin.com/in/nuke-web3/
+      url: https://linkedin.com/in/nuke-web3/
     - network: GitHub
       username: NukeManDan
       url: https://github.com/nukemandan
 
 work:
-  - organization: X Company
-    url: https://example.com
-    location: Remote / New York, New York
+  - organization: Parity Technologies
+    url: https://www.parity.io/
+    location: Remote
     positions:
-      - position: Senior Software Engineer
-        startDate: 2021-08-01
+      - position: Developer Experience Engineer
+        startDate: 2022-04
         endDate: "present"
         highlights:
-          - This being the theory I hold, why need I be afraid of not being able to reconcile it with the case of my ancestors?
-          - "The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-          - Do you really believe that they charged an armed enemy, or treated their children, their own flesh and blood, so cruelly, without a thought for their own interest or advantage?
-      - position: Software Engineer
-        startDate: 2019-05-31
-        endDate: 2021-08-01
+          - 'Development of #link("https://github.com/substrate-developer-hub")[documentation, workshops, tutorials,] and latter #link(<polkadot>)[PBA content] to showcase and educate developers on Parity products.' 
+          - Writing technical documentation to highlight our tools and ensure they stay up to date.
+          - 'Hosting, presenting, and attending events (workshops, presentations, socials) with the developer community using #link("https://github.com/paritytech/polkadot-sdk")[Polkadot and Substrate.]'
+          - Collecting and communicating feedback to inform core engineering and buisness development on issues and needs.
+      - position: Polkadot Support Engineer
+        startDate: 2020-10
+        endDate: 2022-04
         highlights:
-          - This being the theory I hold, why need I be afraid of not being able to reconcile it with the case of my ancestors?
-          - "The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-          - Do you really believe that they charged an armed enemy, or treated their children, their own flesh and blood, so cruelly, without a thought for their own interest or advantage?
-  - organization: National Aeronautics and Space Administration - Jet Propulsion Laboratory
-    url: https://example.com
-    location: Pasadena, California
+          - 'Empowering infrastructure partners - validators, block explorers, wallets, etc. - to develop and/or intergrate with Substrate-based chains.'
+          - 'Moderator for official community and support channels on Discord, #link("https://substrate.stackexchange.com/")[Substrate Stack Exchange], and on (now dericated) Matrix channels.'
+          - Maintaining relationships with partners and supporting them long-term.
+          - Writing technical documentation to address common questions and updating existings docs.
+
+  - organization: Polkadot Blockchain Academy 
+    url: https://polkadot.network/development/blockchain-academy/
+    location: Remote / On-Premises
     positions:
-      - position: Senior Developer
-        startDate: 2016-02-19
-        endDate: 2019-05-31
+      - position: Content Producer
+        startDate: 2022-09
+        endDate: 2024-01
         highlights:
-          - This being the theory I hold, why need I be afraid of not being able to reconcile it with the case of my ancestors?
-          - "The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-          - Do you really believe that they charged an armed enemy, or treated their children, their own flesh and blood, so cruelly, without a thought for their own interest or advantage?
+          - 'Lead for deveopment of the #link("https://github.com/Polkadot-Blockchain-Academy/")[content infrastructure] used in delivery of lessons in person, and reference online.'
+          - Recruited and coordinated with subject matter experts to deliver the first three waves of the PBA. 
+          - On-premises for 5 weeks each wave managing faculty, the classroom, and content delivery.
+      - position: Teaching Assistant
+        startDate: 2022-01
+        endDate: 2024-01
+        highlights:
+          - Within Paity original team member working to rapidly produce content.
+          - On-premises assisting faculty and maintaining infrastructure used to deliver content.
+
+  - organization: ETHDenver
+    url: https://ethdenver.com
+    location: Denver CO, USA
+    positions:
+      - position: Steward
+        startDate: 2018-02
+        endDate: 2022-03
+        highlights:
+          - 'Progessively grew each year to take on more responsibilites related to event planning, managment, and placment of sponsors for #link("https://www.ethdenver.com/buidlweek")[\#BUIDLWeek], ultimately managing the team of Stewards running the \#BUIDLWeek events.'
+          - Hackathon participant (winner in 2019 and 2020), judge, and technical mentor.
+          - Moderation of Discord community.
+
+  - organization:  UC Berkeley Sutardja Center for Entrepreneurship and Technology
+    url: https://scet.berkeley.edu/
+    location: Remote / Berkely CA, USA
+    positions:
+      - position: Instructor
+        startDate: 2021-11
+        endDate: 2022-05
+        highlights:
+          - 'The decentralized applications subject matter expert co-instructing the #link("https://scetx.github.io/build-a-blockchain-startup/")[Build a Blockchain Startup: Decentralized Application (dApp) Development and Entrepreneurship] at UCB SCET. #link("https://www.youtube.com/watch?v=4xmrOoZ5aEQ&list=PLmEJCJQEkD9-LYl9XNip1TbjkQEHVZ3A4")[_(Playlist of recordings)_]'
+          - Developed and delivered technical lessons covering blockchain development and applications, focused on practical and marticable products.
+
+  - organization: University of Denver
+    url: https://du.edu/
+    location: Remote / Denver CO, USA
+    positions:
+      - position: Adjunct Professor
+        startDate: 2019-06
+        endDate: 2021-06
+        highlights:
+          - 'Developed from scratch and instructed the Blockchain Applications Analysis course at DU Center for Professional Development.  #link("https://www.youtube.com/playlist?list=PL1zWhy_MKd1q7V4H3Z_ibLGUswEfykCFl")[_(Playlist of recordings)_]'
+          - Developed and delivered technical lessons covering blockchain development and applications, focused on practical and marticable products.
+
 
 education:
-  - institution: Open University
+  - institution: 
     url: https://example.com/
     area: Computer Science
     studyType: Bachelor of Science
@@ -64,78 +108,42 @@ education:
     highlights:
       - "*Thesis*: A convolutional neural network for predicting Greenland glacier melt and glacial water flow"
       - "*Activities*: Debating, Chess, Cricket"
-  - institution: Harvard University
-    url:
-    area: Computer Science
-    studyType: Bachelor of Science
-    startDate: 2017-08-01
-    endDate: 2021-06-30
-    location: City of London, United Kingdom
-    honors:
-      - Summa Cum Laude (4.0 GPA)
-      - President's List
-      - Dean's List
-    courses:
-      - Algorithms & Data Structures
-      - Applications in Quantitative Finance
-      - Engineering Data Analysis
-      - Compiler Architecture
-    highlights:
-      - "*Thesis*: A convolutional neural network for predicting Greenland glacier melt and glacial water flow"
-      - "*Activities*: Debating, Chess, Cricket"
 
 affiliations:
-  - organization: White Hat Hackers Association
-    position: Vice President for Internal Affairs
-    location: Cambridge, United Kingdom
-    url: https://example.com
-    startDate: 2020-05-30
-    endDate: 2021-05-30
+  - organization: Cryptorado Community
+    position: Founder, Steward
+    url: https://cryptorado.org
+    location: Denver CO, USA
+    startDate: 2017-01
+    endDate: "present"
     highlights:
-      - But I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose.
-      - But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
-      - Can you then suppose that those heroic men performed their famous deeds without any motive at all?
-  - organization: London Bridge Toastmasters Club
-    position: Member
-    location: City of London, United Kingdom
-    url:
-    startDate: 2022-06-15
-    endDate: 2023-06-30
-    highlights:
-      - Won Champion in the Division A District X Speech Evaluation Contest of Toastmasters International
-      - Promising Toastmaster of the Year (PY 2022-2023)
-      - Tell me, pray, what explanation do you put upon their actions?
+      - Home of Colorado's web3 community, with ~3,000 members on our meetup.
+      - Focus on education, evangelization, developing oportunities, and socail networking those working primaritly on the technical or entrepunurial side of web3.
+      - Host of multiple events on a weekly basis with smaller groups, larger ones a few times per quarter.
+      - 'Coordinate the community with a major events to market and support them, such as #link(<ethdenver>)[ETHDenver].'
 
 awards:
-  - title: Champion in the Division A District X Speech Evaluation Contest
+  - title: TODO ETHDenver hack winnings, other hackathons?
     date: 2023-05-09
     issuer: Toastmasters International
     url:
     location: City of London, United Kingdom
     highlights:
-  - title: "Finalist in the 2020 SCG Bangkok Business Challenge Global Competition"
-    date: 2020-07-12
-    issuer: Sasin School of Management
-    url:
-    location: Bangkok, Thailand
-    highlights:
-      - "Made it to the Top 5 (selected from over 100 teams) in the world for the semi-finals of the SCG Bangkok Business Challenge #sym.at Sasin 2020 Global Competition held at Bangkok, Thailand from July 7-12, 2020."
-      - "Served as the speaker and presented in the 60-second pitch round of the Opening Reception of the SCG Bangkok Business Challenge #sym.at Sasin 2022 for Team London Bridge."
 
 certificates:
-  - name: "Learning How to Learn: Powerful mental tools to help you master tough subjects"
+  - name: TODO CPB etc.
     date: 2021-09-01
     issuer: Coursera
     url: https://example.com
 
-publications:
-  - name: A convolutional neural network for predicting Greenland glacier melt and glacial water flow
-    publisher: Theoretical and Computational Fluid Dynamics
-    releaseDate: 2020-09-30
-    url: https://example.com
+# publications:
+#   - name: Nothing related to web3 :)
+#     publisher: N/A
+#     releaseDate: 2020-09-30
+#     url: https://example.com
 
 projects:
-  - name: "Job Tailor"
+  - name:  maybe list https://www.youtube.com/playlist?list=PL1zWhy_MKd1oddVIncyDdAb5n6UmjPH7t videos? TODO
     url: https://example.com/
     affiliation: Open University
     startDate: 2020-11-01
@@ -194,18 +202,16 @@ skills:
       - Altair
 
 languages:
-  - language: English
-    fluency: Native speaker
-  - language: German
-    fluency: Native speaker
-  - language: Japanese
-    fluency: Basic proficiency
+  # - language: English
+  #   fluency: Native speaker
 
 interests:
-  - Video Games
-  - Anime
-  - Reading Non-fiction
-  - Classical and Original Soundtrack Music
+  - Hiking
+  - Mountaineering
+  - Permaculture
+  - Electronic music
+  - Guitar (metal/jazz/classical)
+  - 
 
 references:
   # You can comment out the entries below if you don't have any references
