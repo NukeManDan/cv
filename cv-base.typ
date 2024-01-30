@@ -307,21 +307,6 @@
     ]}
 }
 
-#let cvreferences(info, isbreakable: true) = {
-    if info.references != none {block[
-        == References <refs>
-        #for ref in info.references {
-            block(width: 100%, breakable: isbreakable)[
-                #if ref.url != none [
-                    - *#link(ref.url)[#ref.name]*: "#ref.reference"
-                ] else [
-                    - *#ref.name*: "#ref.reference"
-                ]
-            ]
-        }
-    ]} else {}
-}
-
 #let endnote() = {
     place(
         right,
