@@ -21,7 +21,7 @@
     // add custom document style rules here
     set page(
         paper: "us-letter", // a4, us-letter
-        margin: 1cm,
+        margin: (x: 1.5cm, y: 1cm),
         footer: [
             #set align(center)
             #set text(0.8em)
@@ -53,11 +53,11 @@
 
 #cvheading(cvdata, uservars)
 #cvwork(cvdata)
-#pagebreak()
 #cveducation(cvdata)
+#pagebreak()
 #cvaffiliations(cvdata)
 #cvprojects(cvdata)
 #cvawards(cvdata)
-#cvcertificates(cvdata)
+// #cvcertificates(cvdata)
 // #cvpublications(cvdata)
 #cvskills(cvdata)

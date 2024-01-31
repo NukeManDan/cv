@@ -22,20 +22,21 @@ work:
         startDate: 2022-04
         endDate: "present"
         highlights:
-          - 'Development of #link("https://github.com/substrate-developer-hub")[documentation, workshops, tutorials,] and latter #link(<polkadot>)[PBA content] to showcase and educate developers on Parity products.' 
-          - Writing technical documentation to highlight our tools and ensure they stay up to date.
-          - 'Hosting, presenting, and attending events (workshops, presentations, socials) with the developer community using #link("https://github.com/paritytech/polkadot-sdk")[Polkadot and Substrate.]'
-          - Collecting and communicating feedback to inform core engineering and business development on issues and needs.
+          - >
+            Development of #link("https://github.com/substrate-developer-hub")[documentation, workshops, tutorials,] and #link(<polkadot>)[PBA content]
+          - Educate developers on blockchain and web3 tech, specifically around Parity's products.
+          - 'Hosting presentations, workshops and socials with the developer community using #link("https://github.com/paritytech/polkadot-sdk")[Polkadot and Substrate.]'
+          - Collecting and communicating user feedback to inform core engineering and business development.
       - position: Polkadot Support Engineer
         startDate: 2020-10
         endDate: 2022-04
         highlights:
-          - 'Empowering infrastructure partners - validators, block explorers, wallets, etc. - to develop and/or integrate with Substrate-based chains.'
-          - 'Moderator for official community and support channels on Discord, #link("https://substrate.stackexchange.com/")[Substrate Stack Exchange], and on (now deprecated) Matrix channels.'
+          - "Empowering partners (validators, block explorers, wallets, etc.) to develop and/or integrate with Substrate."
           - Maintaining relationships with partners and supporting them long-term.
+          - 'Moderator for support channels on chat apps and #link("https://substrate.stackexchange.com/")[Substrate Stack Exchange,]'
           - Writing technical documentation to address common questions and updating existing docs.
 
-  - organization: Polkadot Blockchain Academy 
+  - organization: Polkadot Blockchain Academy
     url: https://polkadot.network/development/blockchain-academy/
     location: Remote / On-Premises
     positions:
@@ -43,8 +44,8 @@ work:
         startDate: 2022-09
         endDate: 2024-01
         highlights:
-          - 'Lead for development of the #link(<pba>)[content infrastructure] used in delivery of lessons in person, and reference online.'
-          - Recruited and coordinated with subject matter experts to deliver the first three waves of the PBA. 
+          - "Leading development of the #link(<pba>)[content infrastructure] used in delivery of lessons in person, and reference online."
+          - Recruiting and coordinated with subject matter experts to deliver the first three waves of the PBA.
           - On-premises for 5 weeks each wave managing faculty, the classroom, and content delivery.
       - position: Teaching Assistant
         startDate: 2022-01
@@ -61,20 +62,20 @@ work:
         startDate: 2018-02
         endDate: 2022-03
         highlights:
-          - 'Progressively grew each year to take on more responsibilities related to event planning, management, and placement of sponsors for #link("https://www.ethdenver.com/buidlweek")[\#BUIDLWeek], ultimately managing the team of Stewards running the \#BUIDLWeek events.'
-          - Hackathon participant (winner in 2019 and 2020), judge, speaker, moderator, and technical mentor.
+          - 'Progressively growing role with responsibilities of event planning, management, and placement of sponsors for #link("https://www.ethdenver.com/buidlweek")[\#BUIDLWeek], ultimately managing the team of Stewards running the \#BUIDLWeek events.'
+          - "Hackathon participant #link(<a-ethdenver>)[(winner in 2019 and 2020)], judge, speaker, moderator, and technical mentor."
           - Moderation of Discord community.
 
-  - organization:  UC Berkeley Sutardja Center for Entrepreneurship and Technology
-    url: https://scet.berkeley.edu/
+  - organization: University of California, Berkeley
+    url: https://berkeley.edu/
     location: Remote / Berkeley CA, USA
     positions:
       - position: Instructor
         startDate: 2021-11
         endDate: 2022-05
         highlights:
-          - 'The decentralized applications subject matter expert co-instructing the #link("https://scetx.github.io/build-a-blockchain-startup/")[Build a Blockchain Startup: Decentralized Application (dApp) Development and Entrepreneurship] at UCB SCET. #link("https://www.youtube.com/watch?v=4xmrOoZ5aEQ&list=PLmEJCJQEkD9-LYl9XNip1TbjkQEHVZ3A4")[_(Playlist of recordings)_]'
-          - Developed and delivered technical lessons covering blockchain development and applications, focused on practical and marketable products.
+          - 'The decentralized applications subject matter expert co-instructing the #link("https://scetx.github.io/build-a-blockchain-startup/")[Build a Blockchain Startup: Decentralized Application (dApp) Development and Entrepreneurship] at #link("https://scet.berkeley.edu/")[UCB SCET]. #link("https://www.youtube.com/watch?v=4xmrOoZ5aEQ&list=PLmEJCJQEkD9-LYl9XNip1TbjkQEHVZ3A4")[_(Playlist of recordings)_]'
+          - Development and delivery of technical lessons covering blockchain development and applications, focused on practical and marketable products.
 
   - organization: University of Denver
     url: https://du.edu/
@@ -84,7 +85,7 @@ work:
         startDate: 2019-06
         endDate: 2021-06
         highlights:
-          - 'Developed from scratch and instructed the Blockchain Applications Analysis course at DU Center for Professional Development.  #link("https://www.youtube.com/playlist?list=PL1zWhy_MKd1q7V4H3Z_ibLGUswEfykCFl")[_(Playlist of recordings)_]'
+          - 'Creation and instruction of the Blockchain Applications Analysis course at #link("https://professional.du.edu/")[DU CPD].  #link("https://www.youtube.com/playlist?list=PL1zWhy_MKd1q7V4H3Z_ibLGUswEfykCFl")[_(Playlist of recordings)_]'
           - Judge for hackathon run by the DU Blockchain club.
 
 education:
@@ -92,93 +93,97 @@ education:
     location: Golden CO, USA
     url: https://mines.edu
     degrees:
-    - degree: Applied Nuclear Physics
-      studyType: Doctor of Philosophy (PhD)
-      startDate: 2011-08
-      endDate: 2016-09
-      highlights:
-        - "*Thesis*: The SPIDER fission fragment spectrometer for fission product yield measurements (All but Thesis complete)"
-    - degree: Engineering Physics
-      studyType: Bachelor's of Science
-      startDate: 2007-08
-      endDate: 2011-05
-      highlights:
-        - '*Projects*: #link("https://www.youtube.com/watch?v=dGGzEXurYqM")[Video: Nuclear Power in Stop Motion!]'
-        - "*Activities*: Jazz band: Guitar, Concert band: Trumpet"
-        - "*Societies*: SPSActivities"
+      - degree: "Applied Nuclear Physics {All but Thesis}"
+        studyType: Doctor of Philosophy (PhD)
+        startDate: 2011-08
+        endDate: 2016-09
+        highlights:
+          - "*Thesis*: The SPIDER fission fragment spectrometer for fission product yield measurements"
+      - degree: Engineering Physics
+        studyType: Bachelor's of Science
+        startDate: 2007-08
+        endDate: 2011-05
+        highlights:
+          - '*Projects*: #link("https://www.youtube.com/watch?v=dGGzEXurYqM")[Video: Nuclear Power in Stop Motion!]'
+          - "*Activities*: Jazz band: Guitar, Concert band: Trumpet"
+          # - "*Societies*: SPS"
 
 affiliations:
   - organization: Cryptorado
-    position: Founder, Steward
     url: https://cryptorado.org
     location: Denver CO, USA
-    startDate: 2017-01
-    endDate: "present"
-    highlights:
-      - Home of Colorado's web3 community, with ~3,000 members on our meetup.
-      - Focus on education, evangelization, developing opportunities, and social networking those working primarily on the technical or entrepreneurial side of web3.
-      - Host of multiple events on a weekly basis with smaller groups, larger ones a few times per quarter.
-      - 'Coordinate the community with a major events to market and support them, such as #link(<ethdenver>)[ETHDenver].'
+    positions:
+      - position: Founder, Steward
+        startDate: 2017-01
+        endDate: "present"
+        highlights:
+          - >
+            Home of Colorado's technical and entrepreneurial web3 community, with #link("https://meetup.com/cryptorado")[3,000+ members.]
+          - Education, evangelization, developing opportunities, and social networking  for web3 enthusiasts.
+          - Host of multiple events on a weekly basis with smaller groups, larger ones a few times per quarter.
+          - "Coordinate the community with a major events to market and support them, such as #link(<ethdenver>)[ETHDenver.]"
 
 awards:
-  - title: Hackathon Winner
-    date: 2020-03
-    issuer: Tech to Protect Challenge
+  - issuer: Tech to Protect Challenge
     url: https://www.techtoprotectchallenge.org/
     location: Remote / Los Angeles CA & Denver CO, USA
-    highlights:
-      - 'Overall winner a series of hackathons building a data proof of provenance system using IPFS and Ethereum.'
-  - title: Hackathon Award (Impact)
-    date: 2019-02
-    issuer: ETHDenver
-    url: https://ethdenver.wixsite.com/ethdenver/ethdenver-2019
+    awards:
+      - title: Overall Winner
+        date: 2020-03
+        highlights:
+          - "Overall winner a series of hackathons building a data proof of provenance system using IPFS and Ethereum."
+          - 'See #link("https://www.youtube.com/watch?v=XFNveoZJn0c")[the project pitch.]and also the #link("https://github.com/Corroborator-Net/Corroborator-Overview")[project description and source code.]'
+  - issuer: ETHDenver
+    url: https://ethdenver.com/
     location: Denver CO, USA
-    highlights:
-      - 'Impact track and bounty awards for project enabling the #link("https://mycolorado.gov/colorado-digital-id")[CO digital ID] be used to obtain and selectively share any #link("https://ethereum.org/en/decentralized-identity#how-decentralized-identifiers-and-attestations-enable-decentralized-identity")[verifiable claim] about your identity via a simple chat application.'
-      - 'See #link("https://www.youtube.com/watch?v=RY-EJfxOj2o")[the project pitch].'
-      - 'See also the #link("https://github.com/jierdin/MultiPass")[project description and source code]'
-  - title: Hackathon Winner (Impact)
-    date: 2018-02
-    issuer: ETHDenver
-    url: https://ethdenver.wixsite.com/ethdenver/ethdenver-2019
-    location: Denver CO, USA
-    highlights:
-      - 'Impact track 2nd place overall for project centered on enabling payment of tips for coffee farmers equitably for their provably sourced beans. See #link("https://medium.com/devfolio/turning-up-the-heat-for-the-winds-of-winter-at-devfolio-%EF%B8%8F-16125b93508a")[the blog from our team] and the latter realized #link("https://affogato.co/")[full product].'
+    awards:
+      - title: Bounty Award (Impact)
+        date: 2019-02
+        highlights:
+          - 'Impact track and bounty awards for project enabling the #link("https://mycolorado.gov/colorado-digital-id")[CO digital ID] be used to obtain and selectively share any #link("https://ethereum.org/en/decentralized-identity#how-decentralized-identifiers-and-attestations-enable-decentralized-identity")[verifiable claim] about your identity via a simple chat application.'
+          - 'See #link("https://www.youtube.com/watch?v=RY-EJfxOj2o")[the project pitch.]and also the #link("https://github.com/jierdin/MultiPass")[project description and source code.]'
+      - title: Track Winner (Impact)
+        date: 2018-02
+        highlights:
+          - 'Impact track 2nd place overall for project centering on enabling payment of tips for coffee farmers equitably for their provably sourced beans. See #link("https://medium.com/devfolio/turning-up-the-heat-for-the-winds-of-winter-at-devfolio-%EF%B8%8F-16125b93508a")[the blog from our team] and the latter realized #link("https://affogato.co/")[full product.]'
 
 certificates:
-  # - name: Certified Bitcoin Professional (CBP)
-  #   date: 2020-09
-  #   issuer: CryptoCurrency Certification Consortium (C4)
-  #   url: https://cryptoconsortium.org/certifications/CBP/
+  - name: Certified Bitcoin Professional (CBP)
+    date: 2020-09
+    issuer: CryptoCurrency Certification Consortium (C4)
+    url: https://cryptoconsortium.org/certifications/CBP/
+  - name: Certified Ethereum Professional (CEP)
+    date: 2021-03
+    issuer: CryptoCurrency Certification Consortium (C4)
+    url: https://cryptoconsortium.org/certifications/CBP/
 
 publications:
   - name: The SPIDER fission fragment spectrometer for fission product yield measurements
-    publisher: 'Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment'
+    publisher: "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment"
     releaseDate: 2015-07-11
     url: https://www.sciencedirect.com/science/article/abs/pii/S0168900215002314
   - name: Development of position-sensitive time-of-flight spectrometer for fission fragment research
-    publisher: 'Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment'
+    publisher: "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment"
     releaseDate: 2014-11-11
     url: https://www.sciencedirect.com/science/article/abs/pii/S0168900214008432
 
 projects:
   - name: PBA Content
     url: https://github.com/Polkadot-Blockchain-Academy/pba-book
-    affiliation: '#link(<polkadot>)[Polkadot Blockchain Academy]'
+    affiliation: "#link(<polkadot>)[Polkadot Blockchain Academy]"
     startDate: 2022-01
     endDate: 2024-01
     highlights:
       - Main initial contributor on content infrastructure development and delivery for the original waves of the Academy.
-      - 'Lead the initiative to package and open source PBA content in the form of the #link("https://polkadot-blockchain-academy.github.io/pba-book/")[PBA Book].'
+      - 'Lead the initiative to package and open source PBA content in the form of the #link("https://polkadot-blockchain-academy.github.io/pba-book/")[PBA Book.]'
   - name: Web3 Evangelist
-    url: 
-    affiliation: '#link(<cryptorado>)[Cryptorado]'
-    startDate: 2022-01
+    url:
+    affiliation: "#link(<cryptorado>)[Cryptorado]"
+    startDate: 2017-08
     endDate: 2024-01
     highlights:
-      - 'Public advocate and educator for everything Web3, acting as moderator and speaker for many public and private speaking events: most are #link("https://www.youtube.com/playlist?list=PL1zWhy_MKd1oddVIncyDdAb5n6UmjPH7t")[available here]'
-      - Actively seek to raise awareness of web3 philosophy, technology, and community to the "yet to be initiated" at non-crypto events and communities.
-      - 'Supporter of the #link("https://oedit.colorado.gov/press-release/colorado-announces-blockchain-council-final-report-to-the-community")[Colorado Council for the Advancement of Blockchain Technology] initiative throughout.'
+      - 'Advocate and educator about web3, acting as moderator and speaker for events. Some are #link("https://www.youtube.com/playlist?list=PL1zWhy_MKd1oddVIncyDdAb5n6UmjPH7t")[available here.]'
+      - 'Supporter of the #link("https://oedit.colorado.gov/press-release/colorado-announces-blockchain-council-final-report-to-the-community")[Colorado Council for the Advancement of Blockchain Technology] initiative.'
 
 skills:
   - category: Soft Skills
@@ -199,7 +204,8 @@ skills:
       - TOML
       - YAML
       - Typst
-      - '(Basic competency: Python, JavaScript)'
+      - LaTeX
+      - "(Basic competency: Docker/Containers, Python, JavaScript)"
   - category: Web Development
     skills:
       - MarkDown (and various SSGs)
@@ -219,11 +225,13 @@ skills:
 interests:
   - Hiking
   - Mountaineering
+  - Free and Open Source Software (FOSS)
+  - Self-hosting services and software
   - Permaculture
   - Electronic music
   - Guitar (metal/jazz/classical)
 
 references:
   # - name: (On Request)
-  #   reference: 
-  #   url: 
+  #   reference:
+  #   url:

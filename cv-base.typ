@@ -172,26 +172,28 @@
     if info.affiliations != none {block[
         == Leadership & Activities <lead>
         #for org in info.affiliations {
-            let start = utils.strpdate(org.startDate)
-            let end = utils.strpdate(org.endDate)
-
             block(width: 100%, breakable: isbreakable)[
                 #if org.url != none [
                     === #link(org.url)[#org.organization] #utils.ref-label(org.organization,"") #h(1fr) #org.location
                 ] else [
-                    === #org.organization #h(1fr) #org.location
+                    === #org.organization #utils.ref-label(org.organization,"") #h(1fr) #org.location
                 ]
-                #underline(text(style: "italic")[
-                    #org.position
-                    #h(1fr)
-                    #start #sym.dash.en #end
-                ])
 
-                #if org.highlights != none {
-                    for hi in org.highlights [
-                        - #eval(hi, mode: "markup")
-                    ]
-                } else {}
+                #for p in org.positions {
+                    if p.highlights != none {
+                        let start = utils.strpdate(p.startDate)
+                        let end = utils.strpdate(p.endDate)
+                        underline(text(size: 1.07em, style: "italic")[
+                            #p.position
+                            #h(1fr)
+                            #utils.ref-label(org.organization , p.position)
+                            #start #sym.dash.en #end
+                        ])
+                        for hi in p.highlights [
+                            - #eval(hi, mode: "markup")
+                        ]
+                    } else {}
+                }
             ]
         }
     ]}
@@ -200,22 +202,21 @@
 #let cvprojects(info, isbreakable: true) = {
     if info.projects != none {block[
         == Projects <proj>
-        #for project in info.projects {
-            let start = utils.strpdate(project.startDate)
-            let end = utils.strpdate(project.endDate)
+        #for p in info.projects {
+            let start = utils.strpdate(p.startDate)
+            let end = utils.strpdate(p.endDate)
             block(width: 100%, breakable: isbreakable)[
-                #if project.url != none [
-                    === #link(project.url)[#project.name] #utils.ref-label(project.name,"")
+                #if p.url != none [
+                    === #link(p.url)[#p.name] #utils.ref-label(p.name,"")
                 ] else [
-                    === #eval(project.name, mode: "markup")
+                    === #eval(p.name, mode: "markup") #utils.ref-label(p.name,"")
                 ]
                 #underline(text(style: "italic")[
-                    #eval(project.affiliation, mode: "markup")
+                    #eval(p.affiliation, mode: "markup")
                     #h(1fr)
                     #start #sym.dash.en #end
                 ])
-
-                #for hi in project.highlights [
+                #for hi in p.highlights [
                     - #eval(hi, mode: "markup")
                 ]
             ]
@@ -226,25 +227,28 @@
 #let cvawards(info, isbreakable: true) = {
     if info.awards != none {block[
         == Honors & Awards <awards>
-        #for award in info.awards {
-            let date = utils.strpdate(award.date)
+        #for i in info.awards {
             block(width: 100%, breakable: isbreakable)[
-                #if award.url != none [
-                    === #link(award.url)[#award.title] #h(1fr) #award.location
+                #if i.url != none [
+                    === #link(i.url)[#i.issuer] #utils.ref-label("a-" + i.issuer,"") #h(1fr) #i.location
                 ] else [
-                    === #award.title #h(1fr) #award.location
+                    === #i.issuer #utils.ref-label(i.issuer,"") #h(1fr) #i.location
                 ]
-                #underline([
-                    Issued by #text(style: "italic")[#award.issuer]
-                    #h(1fr)
-                    #date
-                ])
 
-                #if award.highlights != none {
-                    for hi in award.highlights [
-                        - #eval(hi, mode: "markup")
-                    ]
-                } else {}
+                #for a in i.awards {
+                    if a.highlights != none {
+                        let date = utils.strpdate(a.date)
+                        underline(text(size: 1.07em, style: "italic")[
+                            #a.title
+                            #h(1fr)
+                            #utils.ref-label(i.issuer, a.title)
+                            #date
+                        ])
+                        for hi in a.highlights [
+                            - #eval(hi, mode: "markup")
+                        ]
+                    } else {}
+                }
             ]
         }
     ]}
