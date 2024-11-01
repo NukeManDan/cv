@@ -53,8 +53,8 @@
 
 #cvheading(cvdata, uservars)
 #cvwork(cvdata)
-#cveducation(cvdata)
 #pagebreak()
+#cveducation(cvdata)
 #cvaffiliations(cvdata)
 #cvprojects(cvdata)
 #cvawards(cvdata)

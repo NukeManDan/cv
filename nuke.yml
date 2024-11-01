@@ -14,13 +14,27 @@ personal:
       url: https://github.com/nukemandan
 
 work:
+  - organization: RISC Zero
+    url: https://risczero.com/
+    location: Remote
+    positions:
+      - position: Developer Relations Advocate
+        startDate: 2024-05
+        endDate: "present"
+        highlights:
+          - Organizing, hosting, and contributing to events worldwide to evangelize programmable cryptography.
+          - Building and maintaining relationships with partners and community, supporting them long-term.
+          - Collecting and communicating user feedback to inform core engineering and business development.
+          - 'Lead moderator and support engineer on #link("https://discord.com/invite/risczero")[Discord]'
+          - 'Development of #link("https://dev.risczero.com")[documentation], and #link("https://github.com/nuke-web3/book")[workshops, tutorials]'
+
   - organization: Parity Technologies
     url: https://www.parity.io/
     location: Remote
     positions:
       - position: Developer Experience Engineer
         startDate: 2022-04
-        endDate: "present"
+        endDate: 2024-02
         highlights:
           - >
             Development of #link("https://github.com/substrate-developer-hub")[documentation, workshops, tutorials,] and #link(<polkadot>)[PBA content]
@@ -33,7 +47,7 @@ work:
         highlights:
           - "Empowering partners (validators, block explorers, wallets, etc.) to develop and/or integrate with Substrate."
           - Maintaining relationships with partners and supporting them long-term.
-          - 'Moderator for support channels on chat apps and #link("https://substrate.stackexchange.com/")[Substrate Stack Exchange,]'
+          - 'Moderator for support channels on chat apps and #link("https://substrate.stackexchange.com/")[Substrate Stack Exchange].'
           - Writing technical documentation to address common questions and updating existing docs.
 
   - organization: Polkadot Blockchain Academy
